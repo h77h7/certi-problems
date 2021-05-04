@@ -87,7 +87,7 @@ int main() {
 			tmp = q.front();	q.pop_front();
 			int stage = tmp.second;
 			while (tmp.second == stage) {
-				if (ccw(cur1, cur2, tmp.first) > 0) q.push_back(make_pair(tmp.first,tmp.second+1));
+				if (ccw(cur1, cur2, tmp.first) >= 0) q.push_back(make_pair(tmp.first,tmp.second+1));
 				tmp = q.front();	q.pop_front();
 			}
 			q.push_front(tmp);
